@@ -8,5 +8,13 @@ if (environment.production) {
   enableProdMode();
 }
 
-platformBrowserDynamic().bootstrapModule(AppModule)
-  .catch(err => console.log(err));
+declare const Office: any;
+// declare const OfficeHelpers: any;
+
+
+
+Office.initialize = () => {
+  console.log('Office init');
+  platformBrowserDynamic().bootstrapModule(AppModule)
+    .catch(err => console.log(err));
+};
