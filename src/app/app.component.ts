@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 declare const Word: any;
 declare const Office: any;
@@ -10,6 +10,8 @@ declare const Office: any;
 })
 export class AppComponent implements OnInit {
 
+  category;
+
   constructor() {
     // this.addEventHandlerToBinding();
   }
@@ -18,27 +20,15 @@ export class AppComponent implements OnInit {
     this.addEventHandlerToBinding();
   }
 
-  addEventHandlerToBinding() {
-    console.log('Initing addEventHandlerToBinding ');
-    Office.select('bindings#a').addHandlerAsync(Office.EventType.BindingDataChanged, (eventArgs) => {
-      console.log('Data has changed in binding: ' + eventArgs.binding.id);
-    });
-    // console.document.body.addHandlerAsync(Office.EventType.BindingDataChanged, (eventArgs) => {
-    //   console.log('Data has changed in binding: ' + eventArgs.binding.id);
-    // });
+  selectCategory(event) {
+    this.category = event.target.selectedOptions[0].value;
+    console.log(this.category);
   }
 
-
-  readBody() {
-    Word.run(async (context) => {
-      const body = context.document.body;
-      // Queue a command to load the text property of the proxy body object.
-      context.load(body, 'text');
-      // Synchronize the document state by executing the queued commands,
-      // and return a promise to indicate task completion.
-      return context.sync().then(function () {
-        console.log('Body contents: ' + body.text);
-      });
+  selectTemplate(event) {
+    console.log(event.target.innerText);
+    Office.context.document.setSelectedDataAsync(event.target.innerText, {}, asyncResult => {
+      console.log(asyncResult);
     });
   }
 
@@ -60,5 +50,15 @@ export class AppComponent implements OnInit {
         console.log('Body contents: ' + body.text);
       });
     });
+  }
+
+  private addEventHandlerToBinding() {
+    console.log('Initing addEventHandlerToBinding ');
+    Office.select('bindings#a').addHandlerAsync(Office.EventType.BindingDataChanged, (eventArgs) => {
+      console.log('Data has changed in binding: ' + eventArgs.binding.id);
+    });
+    // console.document.body.addHandlerAsync(Office.EventType.BindingDataChanged, (eventArgs) => {
+    //   console.log('Data has changed in binding: ' + eventArgs.binding.id);
+    // });
   }
 }

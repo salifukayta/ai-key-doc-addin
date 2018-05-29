@@ -5,10 +5,35 @@
 </div>
 <div id="content-main">
   <div class="padding">
-    <p>Read body on console.</p>
-    <button (click)="readBody()">Read body</button>
+    <p>Selecionnée une catégorie</p>
+    <select (change)="selectCategory($event)">
+      <option>-</option>
+      <option value="regert">Regret</option>
+      <option value="acceptation">Acceptation</option>
+      <option value="thanks">Remerciment</option>
+    </select>
     <br>
-    <p>Write "everybody" after the cursor</p>
-    <button (click)="writeWord()">write everybody</button>
+
+    <ul *ngIf="category === 'regert'">
+      <li (click)="selectTemplate($event)">Nous sommes dans le regret de vous informer que votre cv n'a pas été retenu</li>
+      <li (click)="selectTemplate($event)">Nous vous informant que votre cv n'a pas été retenu</li>
+      <li (click)="selectTemplate($event)">Nous n'allons pas faire suivre votre candidature</li>
+    </ul>
+
+    <ul *ngIf="category === 'thanks'">
+      <li (click)="selectTemplate($event)">En vous remerciant</li>
+      <li (click)="selectTemplate($event)">Avec tout notre remerciment</li>
+    </ul>
+
+    <ul *ngIf="category === 'acceptation'">
+      <li (click)="selectTemplate($event)">C'est avec joie que nous vous comptons parmis nous</li>
+      <li (click)="selectTemplate($event)">Veuillez trouver ci-joint l'offre que nous vous proposons</li>
+    </ul>
+
+    <!--<br>-->
+    <!--<button (click)="readBody()">Read body</button>-->
+    <!--<br>-->
+    <!--<p>Write "everybody" after the cursor</p>-->
+    <!--<button (click)="writeWord()">write everybody</button>-->
   </div>
 </div>
