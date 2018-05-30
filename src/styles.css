@@ -1,1 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
+
+@font-face {
+	font-family: "Montserra Regular";
+	src: url('polices/Montserrat-Regular.ttf');
+}
+@font-face {
+	font-family: "Montserra Italic";
+	font-style: italic;
+	src: url('polices/Montserrat-Italic.ttf');
+}
+@font-face {
+	font-family: "Montserra Bold";
+	font-weight: bold;
+	src: url('polices/Montserrat-Bold.ttf');
+}

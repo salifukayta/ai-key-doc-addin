@@ -1,34 +1,170 @@
 <div id="content-header">
   <div class="padding">
-    <h1>Welcome</h1>
+    <h1>Suggestions</h1>
   </div>
 </div>
 <div id="content-main">
-  <div class="padding">
-    <p>Selecionnée une catégorie</p>
-    <select (change)="selectCategory($event)">
-      <option>-</option>
-      <option value="regert">Regret</option>
-      <option value="acceptation">Acceptation</option>
-      <option value="thanks">Remerciment</option>
+  <div class="padding-2">
+    <p class="category">Formules de politesse</p>
+    <select (change)="selectCategory($event)" id="Administration">
+      <optgroup label="Administration" class="computer">
+      <option value="regert">Préfet</option>
+      <option value="acceptation">Sous-préfet</option>
+      <option value="thanks">Ambassadeur</option>
+      <option value="Assurance">Assurance maladie</option>
+      <option value="Mutuelle">Mutuelle</option>
+    </optgroup>
+    <optgroup label="Education Nationale">
+        <option value="prof-universite">Professeur d'université</option>
+        <option value="recteur-universite">Recteur d'université</option>
+        <option value="recteur-academie">Recteur d'académie</option>
+        <option value="inspecteur-academie">Inspecteur d'académie</option>
+        <option value="Proviseur-lycee">Proviseur de lycée</option>
+        <option value="Principale-college">Principal de collège</option>
+        <option value="Directeur-ecole">Directeur d'une école</option>
+        <option value="Professeur-ecole">Professeur des écoles</option>
+      </optgroup>
+      <optgroup label="Militaire">
+          <option value="Général">Général</option>
+          <option value="Colonel">Colonel</option>
+          <option value="Commandant">Commandant</option>
+          <option value="Capitaine">Capitaine</option>
+          <option value="Lieutenant">Lieutenant</option>
+          <option value="Maréchal">Maréchal</option>
+        </optgroup>
     </select>
     <br>
 
     <ul *ngIf="category === 'regert'">
-      <li (click)="selectTemplate($event)">Nous sommes dans le regret de vous informer que votre cv n'a pas été retenu</li>
-      <li (click)="selectTemplate($event)">Nous vous informant que votre cv n'a pas été retenu</li>
-      <li (click)="selectTemplate($event)">Nous n'allons pas faire suivre votre candidature</li>
+      <li (click)="selectTemplate($event)"><span class="sous-titre">Formule d'appel :</span></li>
+      <li (click)="selectTemplate($event)"><span class="texte-principal espacement-bloc">Monsieur le Préfet, Madame le Préfet</span></li><br>
+      <li (click)="selectTemplate($event)"><span class="sous-titre">Phrase finale :</span></li>
+      <li (click)="selectTemplate($event)"><span class="texte-principal">Je vous prie de croire, Madame / Monsieur le Préfet, en l'assurance de mes respectueuses salutations.</span></li>
     </ul>
 
     <ul *ngIf="category === 'thanks'">
-      <li (click)="selectTemplate($event)">En vous remerciant</li>
-      <li (click)="selectTemplate($event)">Avec tout notre remerciment</li>
+        <li (click)="selectTemplate($event)"><span class="sous-titre">Formule d'appel :</span></li>
+        <li (click)="selectTemplate($event)"><span class="texte-principal espacement-bloc">Monsieur le sous-préfet, Madame le sous-préfet</span></li><br>
+        <li (click)="selectTemplate($event)"><span class="sous-titre">Phrase finale :</span></li>
+        <li (click)="selectTemplate($event)"><span class="texte-principal">Je vous prie d'agréer, Madame / Monsieur le sous-préfet, l'expression de mes salutations distinguées.</span></li>
     </ul>
 
     <ul *ngIf="category === 'acceptation'">
-      <li (click)="selectTemplate($event)">C'est avec joie que nous vous comptons parmis nous</li>
-      <li (click)="selectTemplate($event)">Veuillez trouver ci-joint l'offre que nous vous proposons</li>
+        <li (click)="selectTemplate($event)"><span class="sous-titre">Formule d'appel :</span></li>
+        <li (click)="selectTemplate($event)"><span class="texte-principal espacement-bloc">Monsieur l'Ambassadeur, Madame l'Ambassadrice</span></li><br>
+        <li (click)="selectTemplate($event)"><span class="sous-titre">Phrase finale :</span></li>
+        <li (click)="selectTemplate($event)"><span class="texte-principal">Je vous prie de croire, Madame l'Ambassadrice / Monsieur l'Ambassadeur, en l'assurance de ma respectueuse considération.</span></li>
     </ul>
+    <ul *ngIf="category === 'Assurance'">
+        <li (click)="selectTemplate($event)"><span class="sous-titre">Formule d'appel :</span></li>
+        <li (click)="selectTemplate($event)"><span class="texte-principal espacement-bloc">Madame, Monsieur</span></li><br>
+        <li (click)="selectTemplate($event)"><span class="sous-titre">Phrase finale :</span></li>
+        <li (click)="selectTemplate($event)"><span class="texte-principal">Veuillez agréer, madame / monsieur, l'expression de mes cordiales salutations.</span></li>
+    </ul>
+    <ul *ngIf="category === 'Mutuelle'">
+        <li (click)="selectTemplate($event)"><span class="sous-titre">Formule d'appel :</span></li>
+        <li (click)="selectTemplate($event)"><span class="texte-principal espacement-bloc">Madame, Monsieur</span></li><br>
+        <li (click)="selectTemplate($event)"><span class="sous-titre">Phrase finale :</span></li>
+        <li (click)="selectTemplate($event)"><span class="texte-principal">Veuillez agréer, madame / monsieur, l'expression de mes cordiales salutations.</span></li>
+    </ul>
+
+    <!--education national-->
+
+    <ul *ngIf="category === 'prof-universite'">
+        <li (click)="selectTemplate($event)"><span class="sous-titre">Formule d'appel :</span></li>
+        <li (click)="selectTemplate($event)"><span class="texte-principal espacement-bloc">Monsieur le professeur, Madame le professeur</span></li><br>
+        <li (click)="selectTemplate($event)"><span class="sous-titre">Phrase finale :</span></li>
+        <li (click)="selectTemplate($event)"><span class="texte-principal">Je vous prie d'agréer, Madame/Monsieur, l'expression des mes salutations distinguées.</span></li>
+      </ul>
+  
+      <ul *ngIf="category === 'recteur-universite'">
+          <li (click)="selectTemplate($event)"><span class="sous-titre">Formule d'appel :</span></li>
+          <li (click)="selectTemplate($event)"><span class="texte-principal espacement-bloc">Monsieur le Recteur, Madame le Recteur</span></li><br>
+          <li (click)="selectTemplate($event)"><span class="sous-titre">Phrase finale :</span></li>
+          <li (click)="selectTemplate($event)"><span class="texte-principal">Je vous prie de croire, Monsieur/Madame le Recteur, en l'assurance de mes respectueuses salutations.</span></li>
+      </ul>
+  
+      <ul *ngIf="category === 'recteur-academie'">
+          <li (click)="selectTemplate($event)"><span class="sous-titre">Formule d'appel :</span></li>
+          <li (click)="selectTemplate($event)"><span class="texte-principal espacement-bloc">Monsieur le Recteur, Madame le Recteur</span></li><br>
+          <li (click)="selectTemplate($event)"><span class="sous-titre">Phrase finale :</span></li>
+          <li (click)="selectTemplate($event)"><span class="texte-principal">Je vous prie de croire, Monsieur/Madame le Recteur, en l'assurance de mes respectueuses salutations.</span></li>
+      </ul>
+      <ul *ngIf="category === 'inspecteur-academie'">
+          <li (click)="selectTemplate($event)"><span class="sous-titre">Formule d'appel :</span></li>
+          <li (click)="selectTemplate($event)"><span class="texte-principal espacement-bloc">Monsieur l'Inspecteur d'Academie, Madame l' Inspectrice d'Académie</span></li><br>
+          <li (click)="selectTemplate($event)"><span class="sous-titre">Phrase finale :</span></li>
+          <li (click)="selectTemplate($event)"><span class="texte-principal">Je vous prie de croire Madame l'Inspectrice d'Académie/ Monsieur l'Inspecteur d' Académie en mes respectueuses salutations.</span></li>
+      </ul>
+      <ul *ngIf="category === 'Proviseur-lycee'">
+          <li (click)="selectTemplate($event)"><span class="sous-titre">Formule d'appel :</span></li>
+          <li (click)="selectTemplate($event)"><span class="texte-principal espacement-bloc">Monsieur le Proviseur, Madame la Proviseure</span></li><br>
+          <li (click)="selectTemplate($event)"><span class="sous-titre">Phrase finale :</span></li>
+          <li (click)="selectTemplate($event)"><span class="texte-principal">Je vous prie d'agréer, Madame la Proviseure/ Monsieur le proviseur, l'expression de ma considération distinguée.</span></li>
+      </ul>
+
+      <ul *ngIf="category === 'Principale-college'">
+          <li (click)="selectTemplate($event)"><span class="sous-titre">Formule d'appel :</span></li>
+          <li (click)="selectTemplate($event)"><span class="texte-principal espacement-bloc">Monsieur le Principal, Madame la Principale</span></li><br>
+          <li (click)="selectTemplate($event)"><span class="sous-titre">Phrase finale :</span></li>
+          <li (click)="selectTemplate($event)"><span class="texte-principal">Je vous prie de croire, Madame la Principale/ Monsieur le principal, à mes respectueuses salutations.</span></li>
+      </ul>
+      <ul *ngIf="category === 'Directeur-ecole'">
+          <li (click)="selectTemplate($event)"><span class="sous-titre">Formule d'appel :</span></li>
+          <li (click)="selectTemplate($event)"><span class="texte-principal espacement-bloc">Monsieur le directeur, Madame la directrice</span></li><br>
+          <li (click)="selectTemplate($event)"><span class="sous-titre">Phrase finale :</span></li>
+          <li (click)="selectTemplate($event)"><span class="texte-principal">Je vous prie d'agréer, Madame/ Monsieur, l'expression de mes cordiales salutations.</span></li>
+      </ul>
+      <ul *ngIf="category === 'Professeur-ecole'">
+          <li (click)="selectTemplate($event)"><span class="sous-titre">Formule d'appel :</span></li>
+          <li (click)="selectTemplate($event)"><span class="texte-principal espacement-bloc">Madame, Monsieur</span></li><br>
+          <li (click)="selectTemplate($event)"><span class="sous-titre">Phrase finale :</span></li>
+          <li (click)="selectTemplate($event)"><span class="texte-principal">Veuillez agréer Madame/Monsieur, l'expression de mes cordiales salutations.</span></li>
+      </ul>
+
+
+ <!--Militaire-->
+
+          <ul *ngIf="category === 'Général'">
+              <li (click)="selectTemplate($event)"><span class="sous-titre">Formule d'appel :</span></li>
+              <li (click)="selectTemplate($event)"><span class="texte-principal">Mon Général, Général</span></li><br>
+              <li (click)="selectTemplate($event)"><span class="sous-titre">Phrase finale :</span></li>
+              <li (click)="selectTemplate($event)"><span class="texte-principal">Je vous prie de bien vouloir agréer, mon général, mes sincères et respectueuses salutations.</span></li>
+            </ul>
+        
+            <ul *ngIf="category === 'Colonel'">
+                <li (click)="selectTemplate($event)"><span class="sous-titre">Formule d'appel :</span></li>
+                <li (click)="selectTemplate($event)"><span class="texte-principal">Mon Colonel, Colonel</span></li><br>
+                <li (click)="selectTemplate($event)"><span class="sous-titre">Phrase finale :</span></li>
+                <li (click)="selectTemplate($event)"><span class="texte-principal">Je vous prie de bien vouloir agréer, mon Colonel, mes sincères et respectueuses salutations.</span></li>
+            </ul>
+        
+            <ul *ngIf="category === 'Commandant'">
+                <li (click)="selectTemplate($event)"><span class="sous-titre">Formule d'appel :</span></li>
+                <li (click)="selectTemplate($event)"><span class="texte-principal">Mon commandant, Commandant</span></li><br>
+                <li (click)="selectTemplate($event)"><span class="sous-titre">Phrase finale :</span></li>
+                <li (click)="selectTemplate($event)"><span class="texte-principal">Je vous prie de bien vouloir agréer, mon Commandant, mes sincères et respectueuses salutations.</span></li>
+            </ul>
+            <ul *ngIf="category === 'Capitaine'">
+                <li (click)="selectTemplate($event)"><span class="sous-titre">Formule d'appel :</span></li>
+                <li (click)="selectTemplate($event)"><span class="texte-principal">Mon Capitaine, Capitaine</span></li><br>
+                <li (click)="selectTemplate($event)"><span class="sous-titre">Phrase finale :</span></li>
+                <li (click)="selectTemplate($event)"><span class="texte-principal">Je vous prie de bien vouloir agréer, mon Capitaine, mes sincères et respectueuses salutations.</span></li>
+            </ul>
+            <ul *ngIf="category === 'Lieutenant'">
+                <li (click)="selectTemplate($event)"><span class="sous-titre">Formule d'appel :</span></li>
+                <li (click)="selectTemplate($event)"><span class="texte-principal">Mon Lieutenant, Lieutenant, Monsieur/Madame</span></li><br>
+                <li (click)="selectTemplate($event)"><span class="sous-titre">Phrase finale :</span></li>
+                <li (click)="selectTemplate($event)"><span class="texte-principal">Je vous prie de bien vouloir agréer, mon Lieutenant/Lieutenant/Monsieur/Madame, mes sincères et respectueuses salutations.</span></li>
+            </ul>
+      
+            <ul *ngIf="category === 'Maréchal'">
+                <li (click)="selectTemplate($event)"><span class="sous-titre">Formule d'appel :</span></li>
+                <li (click)="selectTemplate($event)"><span class="texte-principal">Maréchal, monsieur/ Madame</span></li><br>
+                <li (click)="selectTemplate($event)"><span class="sous-titre">Phrase finale :</span></li>
+                <li (click)="selectTemplate($event)"><span class="texte-principal">Je vous prie de bien vouloir agréer, Maréchal/Monsieur/Madame, mes sincères et respectueuses salutations.</span></li>
+            </ul>
+          
 
     <!--<br>-->
     <!--<button (click)="readBody()">Read body</button>-->
