@@ -4,11 +4,13 @@
 	font-family: 'Montserra Regular';
 	src: url('assets/polices/Montserrat-Regular.ttf');
 }
+
 @font-face {
 	font-family: 'Montserra Italic';
 	font-style: italic;
 	src: url('assets/polices/Montserrat-Italic.ttf');
 }
+
 @font-face {
 	font-family: 'Montserra Bold';
 	font-weight: bold;

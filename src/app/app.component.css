@@ -31,17 +31,22 @@ li{
   color: #0078d7;
   padding-bottom: 5px;
 }
-.category{
-  font-family: "Montserra Bold";
-  color: #0078d7;
-  font-size: 1.2em;
-}
 .espacement-bloc{
   padding-bottom: 15px;
+}
+
+li {
+  padding: 10px 0 10px 0;
 }
 .texte-principal{
   font-family: "Montserra Regular";
   font-size: 0.8em;
+  color: black;
+}
+
+li.square{
+  list-style-type: square;
+  color: #0078d7;
 }
 .padding-2 {
   padding: 15px;

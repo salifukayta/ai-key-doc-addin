@@ -5,7 +5,6 @@
 </div>
 <div id="content-main">
   <div class="padding-2">
-    <p class="category">Formules de politesse</p>
     <select (change)="selectCategory($event)" id="Administration">
       <optgroup label="Administration" class="computer">
       <option value="regert">Préfet</option>
@@ -37,47 +36,52 @@
 
     <ul *ngIf="category === 'regert'">
       <li (click)="selectTemplate($event)"><span class="sous-titre">Formule d'appel :</span></li>
-      <li (click)="selectTemplate($event)"><span class="texte-principal espacement-bloc">Monsieur le Préfet, Madame le Préfet</span>
+      <li class="square"(click)="selectTemplate($event)"><span class="texte-principal espacement-bloc">Monsieur le Préfet, Madame le Préfet</span>
       </li>
       <br>
-      <li (click)="selectTemplate($event)"><span class="sous-titre">Phrase finale :</span></li>
-      <li (click)="selectTemplate($event)"><span class="texte-principal">Je vous prie de croire, Madame / Monsieur le Préfet, en l'assurance de mes respectueuses salutations.</span>
+      <li (click)="selectTemplate($event)"><span class="sous-titre">Formule de politesse :</span></li>
+      <li class="square"(click)="selectTemplate($event)"><span class="texte-principal">Je vous prie de croire, Madame / Monsieur le Préfet, en l'assurance de mes respectueuses salutations.</span>
       </li>
     </ul>
 
     <ul *ngIf="category === 'thanks'">
       <li (click)="selectTemplate($event)"><span class="sous-titre">Formule d'appel :</span></li>
-      <li (click)="selectTemplate($event)"><span class="texte-principal espacement-bloc">Monsieur le sous-préfet, Madame le sous-préfet</span>
+      <li class="square" (click)="selectTemplate($event)"><span class="texte-principal espacement-bloc">Monsieur le sous-préfet, Madame le sous-préfet</span>
       </li>
       <br>
-      <li (click)="selectTemplate($event)"><span class="sous-titre">Phrase finale :</span></li>
-      <li (click)="selectTemplate($event)"><span class="texte-principal">Je vous prie d'agréer, Madame / Monsieur le sous-préfet, l'expression de mes salutations distinguées.</span>
+      <li (click)="selectTemplate($event)"><span class="sous-titre">Formule de politesse :</span></li>
+      <li class="square" (click)="selectTemplate($event)"><span class="texte-principal">Je vous prie d'agréer, Madame / Monsieur le sous-préfet, l'expression de mes salutations distinguées.</span>
       </li>
     </ul>
 
     <ul *ngIf="category === 'acceptation'">
       <li (click)="selectTemplate($event)"><span class="sous-titre">Formule d'appel :</span></li>
-      <li (click)="selectTemplate($event)"><span class="texte-principal espacement-bloc">Monsieur l'Ambassadeur, Madame l'Ambassadrice</span>
+      <li class="square" (click)="selectTemplate($event)"><span class="texte-principal espacement-bloc">Monsieur l'Ambassadeur, Madame l'Ambassadrice</span>
       </li>
       <br>
-      <li (click)="selectTemplate($event)"><span class="sous-titre">Phrase finale :</span></li>
-      <li (click)="selectTemplate($event)"><span class="texte-principal">Je vous prie de croire, Madame l'Ambassadrice / Monsieur l'Ambassadeur, en l'assurance de ma respectueuse considération.</span>
+      <li (click)="selectTemplate($event)"><span class="sous-titre">Formule de politesse :</span></li>
+      <li class="square"(click)="selectTemplate($event)"><span class="texte-principal">Je vous prie de croire, Madame l'Ambassadrice / Monsieur l'Ambassadeur, en l'assurance de ma respectueuse considération.</span>
       </li>
     </ul>
     <ul *ngIf="category === 'Assurance'">
       <li (click)="selectTemplate($event)"><span class="sous-titre">Formule d'appel :</span></li>
-      <li (click)="selectTemplate($event)"><span class="texte-principal espacement-bloc">Madame, Monsieur</span></li>
+      <li class="square" (click)="selectTemplate($event)"><span class="texte-principal espacement-bloc">Madame, Monsieur</span></li>
       <br>
-      <li (click)="selectTemplate($event)"><span class="sous-titre">Phrase finale :</span></li>
-      <li (click)="selectTemplate($event)"><span class="texte-principal">Veuillez agréer, madame / monsieur, l'expression de mes cordiales salutations.</span>
+      <li (click)="selectTemplate($event)"><span class="sous-titre">Formule de politesse :</span></li>
+      <li class="square" (click)="selectTemplate($event)"><span class="texte-principal">Veuillez agréer, madame / monsieur, l'expression de mes cordiales salutations.</span>
       </li>
     </ul>
     <ul *ngIf="category === 'Mutuelle'">
       <li (click)="selectTemplate($event)"><span class="sous-titre">Formule d'appel :</span></li>
-      <li (click)="selectTemplate($event)"><span class="texte-principal espacement-bloc">Madame, Monsieur</span></li>
+      <li class="square" (click)="selectTemplate($event)"><span class="texte-principal espacement-bloc">Madame, Monsieur</span></li>
       <br>
-      <li (click)="selectTemplate($event)"><span class="sous-titre">Phrase finale :</span></li>
-      <li (click)="selectTemplate($event)"><span class="texte-principal">Veuillez agréer, madame / monsieur, l'expression de mes cordiales salutations.</span>
+      <li (click)="selectTemplate($event)"><span class="sous-titre">Corps du message :</span></li>
+      <li class="square" (click)="selectTemplate($event)"><span class="texte-principal espacement-bloc">Veuillez trouver, ci-joint, le support</span></li>
+      <li class="square" (click)="selectTemplate($event)"><span class="texte-principal espacement-bloc">Veuillez nous transmettre la date de la mise en production</span></li>
+      <li class="square" (click)="selectTemplate($event)"><span class="texte-principal espacement-bloc">pour rappel la livraison sera prévue le</span></li>
+      <br>
+      <li (click)="selectTemplate($event)"><span class="sous-titre">Formule de politesse :</span></li>
+      <li class="square" (click)="selectTemplate($event)"><span class="texte-principal">Veuillez agréer, madame / monsieur, l'expression de mes cordiales salutations.</span>
       </li>
     </ul>
 
@@ -85,76 +89,76 @@
 
     <ul *ngIf="category === 'prof-universite'">
       <li (click)="selectTemplate($event)"><span class="sous-titre">Formule d'appel :</span></li>
-      <li (click)="selectTemplate($event)"><span class="texte-principal espacement-bloc">Monsieur le professeur, Madame le professeur</span>
+      <li class="square" (click)="selectTemplate($event)"><span class="texte-principal espacement-bloc">Monsieur le professeur, Madame le professeur</span>
       </li>
       <br>
-      <li (click)="selectTemplate($event)"><span class="sous-titre">Phrase finale :</span></li>
-      <li (click)="selectTemplate($event)"><span class="texte-principal">Je vous prie d'agréer, Madame/Monsieur, l'expression des mes salutations distinguées.</span>
+      <li (click)="selectTemplate($event)"><span class="sous-titre">Formule de politesse :</span></li>
+      <li class="square" (click)="selectTemplate($event)"><span class="texte-principal">Je vous prie d'agréer, Madame/Monsieur, l'expression des mes salutations distinguées.</span>
       </li>
     </ul>
 
     <ul *ngIf="category === 'recteur-universite'">
       <li (click)="selectTemplate($event)"><span class="sous-titre">Formule d'appel :</span></li>
-      <li (click)="selectTemplate($event)"><span class="texte-principal espacement-bloc">Monsieur le Recteur, Madame le Recteur</span>
+      <li class="square" (click)="selectTemplate($event)"><span class="texte-principal espacement-bloc">Monsieur le Recteur, Madame le Recteur</span>
       </li>
       <br>
-      <li (click)="selectTemplate($event)"><span class="sous-titre">Phrase finale :</span></li>
-      <li (click)="selectTemplate($event)"><span class="texte-principal">Je vous prie de croire, Monsieur/Madame le Recteur, en l'assurance de mes respectueuses salutations.</span>
+      <li (click)="selectTemplate($event)"><span class="sous-titre">Formule de politesse :</span></li>
+      <li class="square" (click)="selectTemplate($event)"><span class="texte-principal">Je vous prie de croire, Monsieur/Madame le Recteur, en l'assurance de mes respectueuses salutations.</span>
       </li>
     </ul>
 
     <ul *ngIf="category === 'recteur-academie'">
       <li (click)="selectTemplate($event)"><span class="sous-titre">Formule d'appel :</span></li>
-      <li (click)="selectTemplate($event)"><span class="texte-principal espacement-bloc">Monsieur le Recteur, Madame le Recteur</span>
+      <li class="square" (click)="selectTemplate($event)"><span class="texte-principal espacement-bloc">Monsieur le Recteur, Madame le Recteur</span>
       </li>
       <br>
-      <li (click)="selectTemplate($event)"><span class="sous-titre">Phrase finale :</span></li>
-      <li (click)="selectTemplate($event)"><span class="texte-principal">Je vous prie de croire, Monsieur/Madame le Recteur, en l'assurance de mes respectueuses salutations.</span>
+      <li (click)="selectTemplate($event)"><span class="sous-titre">Formule de politesse :</span></li>
+      <li class="square" (click)="selectTemplate($event)"><span class="texte-principal">Je vous prie de croire, Monsieur/Madame le Recteur, en l'assurance de mes respectueuses salutations.</span>
       </li>
     </ul>
     <ul *ngIf="category === 'inspecteur-academie'">
       <li (click)="selectTemplate($event)"><span class="sous-titre">Formule d'appel :</span></li>
-      <li (click)="selectTemplate($event)"><span class="texte-principal espacement-bloc">Monsieur l'Inspecteur d'Academie, Madame l' Inspectrice d'Académie</span>
+      <li class="square" (click)="selectTemplate($event)"><span class="texte-principal espacement-bloc">Monsieur l'Inspecteur d'Academie, Madame l' Inspectrice d'Académie</span>
       </li>
       <br>
-      <li (click)="selectTemplate($event)"><span class="sous-titre">Phrase finale :</span></li>
-      <li (click)="selectTemplate($event)"><span class="texte-principal">Je vous prie de croire Madame l'Inspectrice d'Académie/ Monsieur l'Inspecteur d' Académie en mes respectueuses salutations.</span>
+      <li (click)="selectTemplate($event)"><span class="sous-titre">Formule de politesse :</span></li>
+      <li class="square" (click)="selectTemplate($event)"><span class="texte-principal">Je vous prie de croire Madame l'Inspectrice d'Académie/ Monsieur l'Inspecteur d' Académie en mes respectueuses salutations.</span>
       </li>
     </ul>
     <ul *ngIf="category === 'Proviseur-lycee'">
       <li (click)="selectTemplate($event)"><span class="sous-titre">Formule d'appel :</span></li>
-      <li (click)="selectTemplate($event)"><span class="texte-principal espacement-bloc">Monsieur le Proviseur, Madame la Proviseure</span>
+      <li class="square" (click)="selectTemplate($event)"><span class="texte-principal espacement-bloc">Monsieur le Proviseur, Madame la Proviseure</span>
       </li>
       <br>
-      <li (click)="selectTemplate($event)"><span class="sous-titre">Phrase finale :</span></li>
-      <li (click)="selectTemplate($event)"><span class="texte-principal">Je vous prie d'agréer, Madame la Proviseure/ Monsieur le proviseur, l'expression de ma considération distinguée.</span>
+      <li (click)="selectTemplate($event)"><span class="sous-titre">Formule de politesse :</span></li>
+      <li class="square" (click)="selectTemplate($event)"><span class="texte-principal">Je vous prie d'agréer, Madame la Proviseure/ Monsieur le proviseur, l'expression de ma considération distinguée.</span>
       </li>
     </ul>
 
     <ul *ngIf="category === 'Principale-college'">
       <li (click)="selectTemplate($event)"><span class="sous-titre">Formule d'appel :</span></li>
-      <li (click)="selectTemplate($event)"><span class="texte-principal espacement-bloc">Monsieur le Principal, Madame la Principale</span>
+      <li class="square" (click)="selectTemplate($event)"><span class="texte-principal espacement-bloc">Monsieur le Principal, Madame la Principale</span>
       </li>
       <br>
-      <li (click)="selectTemplate($event)"><span class="sous-titre">Phrase finale :</span></li>
-      <li (click)="selectTemplate($event)"><span class="texte-principal">Je vous prie de croire, Madame la Principale/ Monsieur le principal, à mes respectueuses salutations.</span>
+      <li (click)="selectTemplate($event)"><span class="sous-titre">Formule de politesse :</span></li>
+      <li class="square" (click)="selectTemplate($event)"><span class="texte-principal">Je vous prie de croire, Madame la Principale/ Monsieur le principal, à mes respectueuses salutations.</span>
       </li>
     </ul>
     <ul *ngIf="category === 'Directeur-ecole'">
       <li (click)="selectTemplate($event)"><span class="sous-titre">Formule d'appel :</span></li>
-      <li (click)="selectTemplate($event)"><span class="texte-principal espacement-bloc">Monsieur le directeur, Madame la directrice</span>
+      <li class="square" (click)="selectTemplate($event)"><span class="texte-principal espacement-bloc">Monsieur le directeur, Madame la directrice</span>
       </li>
       <br>
-      <li (click)="selectTemplate($event)"><span class="sous-titre">Phrase finale :</span></li>
-      <li (click)="selectTemplate($event)"><span class="texte-principal">Je vous prie d'agréer, Madame/ Monsieur, l'expression de mes cordiales salutations.</span>
+      <li (click)="selectTemplate($event)"><span class="sous-titre">Formule de politesse :</span></li>
+      <li class="square" (click)="selectTemplate($event)"><span class="texte-principal">Je vous prie d'agréer, Madame/ Monsieur, l'expression de mes cordiales salutations.</span>
       </li>
     </ul>
     <ul *ngIf="category === 'Professeur-ecole'">
       <li (click)="selectTemplate($event)"><span class="sous-titre">Formule d'appel :</span></li>
-      <li (click)="selectTemplate($event)"><span class="texte-principal espacement-bloc">Madame, Monsieur</span></li>
+      <li class="square" (click)="selectTemplate($event)"><span class="texte-principal espacement-bloc">Madame, Monsieur</span></li>
       <br>
-      <li (click)="selectTemplate($event)"><span class="sous-titre">Phrase finale :</span></li>
-      <li (click)="selectTemplate($event)"><span class="texte-principal">Veuillez agréer Madame/Monsieur, l'expression de mes cordiales salutations.</span>
+      <li (click)="selectTemplate($event)"><span class="sous-titre">Formule de politesse :</span></li>
+      <li class="square" (click)="selectTemplate($event)"><span class="texte-principal">Veuillez agréer Madame/Monsieur, l'expression de mes cordiales salutations.</span>
       </li>
     </ul>
 
@@ -163,54 +167,54 @@
 
     <ul *ngIf="category === 'Général'">
       <li (click)="selectTemplate($event)"><span class="sous-titre">Formule d'appel :</span></li>
-      <li (click)="selectTemplate($event)"><span class="texte-principal">Mon Général, Général</span></li>
+      <li class="square" (click)="selectTemplate($event)"><span class="texte-principal">Mon Général, Général</span></li>
       <br>
-      <li (click)="selectTemplate($event)"><span class="sous-titre">Phrase finale :</span></li>
-      <li (click)="selectTemplate($event)"><span class="texte-principal">Je vous prie de bien vouloir agréer, mon général, mes sincères et respectueuses salutations.</span>
+      <li (click)="selectTemplate($event)"><span class="sous-titre">Formule de politesse :</span></li>
+      <li class="square" (click)="selectTemplate($event)"><span class="texte-principal">Je vous prie de bien vouloir agréer, mon général, mes sincères et respectueuses salutations.</span>
       </li>
     </ul>
 
     <ul *ngIf="category === 'Colonel'">
       <li (click)="selectTemplate($event)"><span class="sous-titre">Formule d'appel :</span></li>
-      <li (click)="selectTemplate($event)"><span class="texte-principal">Mon Colonel, Colonel</span></li>
+      <li class="square" (click)="selectTemplate($event)"><span class="texte-principal">Mon Colonel, Colonel</span></li>
       <br>
-      <li (click)="selectTemplate($event)"><span class="sous-titre">Phrase finale :</span></li>
-      <li (click)="selectTemplate($event)"><span class="texte-principal">Je vous prie de bien vouloir agréer, mon Colonel, mes sincères et respectueuses salutations.</span>
+      <li (click)="selectTemplate($event)"><span class="sous-titre">Formule de politesse :</span></li>
+      <li class="square" (click)="selectTemplate($event)"><span class="texte-principal">Je vous prie de bien vouloir agréer, mon Colonel, mes sincères et respectueuses salutations.</span>
       </li>
     </ul>
 
     <ul *ngIf="category === 'Commandant'">
       <li (click)="selectTemplate($event)"><span class="sous-titre">Formule d'appel :</span></li>
-      <li (click)="selectTemplate($event)"><span class="texte-principal">Mon commandant, Commandant</span></li>
+      <li class="square" (click)="selectTemplate($event)"><span class="texte-principal">Mon commandant, Commandant</span></li>
       <br>
-      <li (click)="selectTemplate($event)"><span class="sous-titre">Phrase finale :</span></li>
-      <li (click)="selectTemplate($event)"><span class="texte-principal">Je vous prie de bien vouloir agréer, mon Commandant, mes sincères et respectueuses salutations.</span>
+      <li (click)="selectTemplate($event)"><span class="sous-titre">Formule de politesse :</span></li>
+      <li class="square" (click)="selectTemplate($event)"><span class="texte-principal">Je vous prie de bien vouloir agréer, mon Commandant, mes sincères et respectueuses salutations.</span>
       </li>
     </ul>
     <ul *ngIf="category === 'Capitaine'">
       <li (click)="selectTemplate($event)"><span class="sous-titre">Formule d'appel :</span></li>
-      <li (click)="selectTemplate($event)"><span class="texte-principal">Mon Capitaine, Capitaine</span></li>
+      <li class="square" (click)="selectTemplate($event)"><span class="texte-principal">Mon Capitaine, Capitaine</span></li>
       <br>
-      <li (click)="selectTemplate($event)"><span class="sous-titre">Phrase finale :</span></li>
-      <li (click)="selectTemplate($event)"><span class="texte-principal">Je vous prie de bien vouloir agréer, mon Capitaine, mes sincères et respectueuses salutations.</span>
+      <li (click)="selectTemplate($event)"><span class="sous-titre">Formule de politesse :</span></li>
+      <li class="square" (click)="selectTemplate($event)"><span class="texte-principal">Je vous prie de bien vouloir agréer, mon Capitaine, mes sincères et respectueuses salutations.</span>
       </li>
     </ul>
     <ul *ngIf="category === 'Lieutenant'">
       <li (click)="selectTemplate($event)"><span class="sous-titre">Formule d'appel :</span></li>
-      <li (click)="selectTemplate($event)"><span
+      <li class="square" (click)="selectTemplate($event)"><span
         class="texte-principal">Mon Lieutenant, Lieutenant, Monsieur/Madame</span></li>
       <br>
-      <li (click)="selectTemplate($event)"><span class="sous-titre">Phrase finale :</span></li>
-      <li (click)="selectTemplate($event)"><span class="texte-principal">Je vous prie de bien vouloir agréer, mon Lieutenant/Lieutenant/Monsieur/Madame, mes sincères et respectueuses salutations.</span>
+      <li (click)="selectTemplate($event)"><span class="sous-titre">Formule de politesse :</span></li>
+      <li class="square" (click)="selectTemplate($event)"><span class="texte-principal">Je vous prie de bien vouloir agréer, mon Lieutenant/Lieutenant/Monsieur/Madame, mes sincères et respectueuses salutations.</span>
       </li>
     </ul>
 
     <ul *ngIf="category === 'Maréchal'">
       <li (click)="selectTemplate($event)"><span class="sous-titre">Formule d'appel :</span></li>
-      <li (click)="selectTemplate($event)"><span class="texte-principal">Maréchal, monsieur/ Madame</span></li>
+      <li class="square" (click)="selectTemplate($event)"><span class="texte-principal">Maréchal, monsieur/ Madame</span></li>
       <br>
-      <li (click)="selectTemplate($event)"><span class="sous-titre">Phrase finale :</span></li>
-      <li (click)="selectTemplate($event)"><span class="texte-principal">Je vous prie de bien vouloir agréer, Maréchal/Monsieur/Madame, mes sincères et respectueuses salutations.</span>
+      <li (click)="selectTemplate($event)"><span class="sous-titre">Formule de politesse :</span></li>
+      <li class="square" (click)="selectTemplate($event)"><span class="texte-principal">Je vous prie de bien vouloir agréer, Maréchal/Monsieur/Madame, mes sincères et respectueuses salutations.</span>
       </li>
     </ul>
 
