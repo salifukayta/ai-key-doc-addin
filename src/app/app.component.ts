@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 
-declare const Word: any;
+// declare const Word: any;
 declare const Office: any;
 
 @Component({
@@ -10,10 +10,11 @@ declare const Office: any;
 })
 export class AppComponent implements OnInit {
 
+  showAdministration = false;
+
   category;
 
   constructor() {
-    // this.addEventHandlerToBinding();
   }
 
   ngOnInit() {
@@ -32,25 +33,25 @@ export class AppComponent implements OnInit {
     });
   }
 
-  writeWord() {
-    Word.run(async (context) => {
-      // Create a proxy object for the document body.
-      const body = context.document.body;
-
-      // Queue a command to load the text property of the proxy body object.
-      context.load(body, 'text');
-
-      // Queue a command to insert text into the end of the Word document body.
-      body.insertText('This is text inserted after loading the body.text property',
-        Word.InsertLocation.end);
-
-      // Synchronize the document state by executing the queued commands,
-      // and return a promise to indicate task completion.
-      return context.sync().then(function () {
-        console.log('Body contents: ' + body.text);
-      });
-    });
-  }
+  // writeWord() {
+  //   Word.run(async (context) => {
+  //     // Create a proxy object for the document body.
+  //     const body = context.document.body;
+  //
+  //     // Queue a command to load the text property of the proxy body object.
+  //     context.load(body, 'text');
+  //
+  //     // Queue a command to insert text into the end of the Word document body.
+  //     body.insertText('This is text inserted after loading the body.text property',
+  //       Word.InsertLocation.end);
+  //
+  //     // Synchronize the document state by executing the queued commands,
+  //     // and return a promise to indicate task completion.
+  //     return context.sync().then(function () {
+  //       console.log('Body contents: ' + body.text);
+  //     });
+  //   });
+  // }
 
   private addEventHandlerToBinding() {
     console.log('Initing addEventHandlerToBinding ');
