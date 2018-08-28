@@ -1,4 +1,5 @@
-import {Component, OnInit} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ItemService } from './item/item.service';
 
 // declare const Word: any;
 declare const Office: any;
@@ -14,7 +15,7 @@ export class AppComponent implements OnInit {
 
   category;
 
-  constructor() {
+  constructor(private itemService: ItemService) {
   }
 
   ngOnInit() {
@@ -24,6 +25,10 @@ export class AppComponent implements OnInit {
   selectCategory(event) {
     this.category = event.target.selectedOptions[0].value;
     console.log(this.category);
+
+    this.itemService.getAll().subscribe(data => {
+      console.log('-----------------------------------------', data);
+    });
   }
 
   selectTemplate(event) {
